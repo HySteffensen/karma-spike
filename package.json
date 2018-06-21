@@ -1,0 +1,23 @@
+{
+  "name": "karma-spike",
+  "version": "1.0.0",
+  "description": "In this repository, I will be test-driving karma.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HySteffensen/karma-spike.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HySteffensen/karma-spike/issues"
+  },
+  "homepage": "https://github.com/HySteffensen/karma-spike#readme",
+  "devDependencies": {
+    "jake": "^8.0.16"
+  }
+}
