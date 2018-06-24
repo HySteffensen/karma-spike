@@ -5,13 +5,14 @@
     "use strict";
     
     var jshint = require('simplebuild-jshint');
+    var mocha = require('./mocha_runner');
     
     desc("Default Task");
-    task("default", [ "lint" ], function() {
+    task("default", [ "lint", "test" ], function() {
         console.log("BUILD OK\n\n");
     });
 
-    desc("Lint everything");
+    desc("Lint Everything");
     task("lint", function() {
         process.stdout.write("Linting JavaScript: ");
         jshint.checkFiles({
@@ -20,6 +21,12 @@
             globals: lintGlobals()
         }, complete, fail);
     }, { async: true });
+
+    desc("Test Everything");
+    task("test", function() {
+        process.stdout.write("Running Tests: . \n");
+        mocha.run();
+    });
 
     function lintOptions() {
         return {
