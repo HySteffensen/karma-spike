@@ -25,7 +25,7 @@
     desc("Test Everything");
     task("test", function() {
         process.stdout.write("Running Tests: . \n");
-        mocha.run();
+        mocha.start();
     });
 
     function lintOptions() {
